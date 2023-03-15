@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+main(){
+    int i;
+    char x[2];
+
+    struct Master_Mahasiswa
+    {
+        char nama[35];
+        char alamat[50];
+        char npm[15];
+        char jkel;
+        int umur;
+    };
+
+    Master_Mahasiswa Data_mahasiswa[2];
+
+    for(int i=1; i<=2; i++){
+        cout<<"INPUTKAN DATA MAHASISWA : "<<endl;
+        cout<<"\tNAMA\t\t: "<<endl; 
+        gets(Data_mahasiswa[i].nama);
+        cout<<"\tNPM\t\t: "<<endl; 
+        gets(Data_mahasiswa[i].npm);
+        cout<<"\tALAMAT\t\t: "<<endl; 
+        gets(Data_mahasiswa[i].alamat);
+        cout<<"\tJENIS KELAMIN\t\t: "<<endl;
+        cin>>Data_mahasiswa[i].jkel;
+        cout<<"\tUMUR\t\t: "<<endl;
+        cin>>Data_mahasiswa[i].umur;
+
+        cin.getline(x, sizeof(x)); 
+        cout<<endl;
+    }
+
+    cout<<"================ DATA MAHASISWA ================"<<endl;
+    for (int i = 1; i <= 2; i++)
+    {
+        cout<<"\tNAMA\t\t: "<<Data_mahasiswa[i].nama<<endl; 
+        cout<<"\tNPM\t\t: "<<Data_mahasiswa[i].npm<<endl; 
+        cout<<"\tALAMAT\t\t: "<<Data_mahasiswa[i].alamat<<endl; 
+        cout<<"\tJENIS KELAMIN\t\t: "<<Data_mahasiswa[i].jkel<<endl; 
+        cout<<"\tUMUR\t\t: "<<Data_mahasiswa[i].umur<<endl<<endl; 
+    }
+    
+}
